@@ -1,0 +1,272 @@
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.index-page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+}
+
+/*region Header Section*/
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 70px;
+    align-items: center;
+    z-index: 998;
+}
+
+.header-section .logo img {
+    width: 80px;
+}
+
+.header-section .logo a {
+    color: #fff;
+    font-family: "Protest Guerrilla", sans-serif;
+    transition: 0.3s ease-in-out;
+    font-size: 30px;
+}
+
+.header-section .logo a:hover {
+    color: var(--blue-1);
+}
+
+.header-section .h-nav {
+    display: flex;
+    gap: 140px;
+    align-items: center;
+}
+
+.header-section .h-nav .horizontal-menu {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.header-section .h-nav .horizontal-menu a {
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+.header-section .h-nav .horizontal-menu a:hover {
+    /* color: var(--blue-1); */
+    background-color: var(--blue-1);
+
+}
+
+.header-section .h-nav .btn-open {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.header-section .h-nav .btn-open svg {
+    font-size: 30px;
+}
+
+/*endregion*/
+
+/*region Navbar Section*/
+.navbar-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.navbar-section .v-nav {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.navbar-section .v-nav .btn-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;
+}
+
+.navbar-section .v-nav .vertical-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-section .v-nav .vertical-menu li {
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+.navbar-section .v-nav .vertical-menu li a {
+    transition: 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.navbar-section .v-nav .vertical-menu li:hover {
+    margin-right: 20px;
+}
+
+.navbar-section .v-nav .vertical-menu li:hover a {
+    color: var(--blue-1);
+}
+
+/*endregion*/
+
+/*region Backgrounds Section*/
+.backgrounds {
+    height: 100%;
+}
+
+.backgrounds .section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+.backgrounds .section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.backgrounds .section .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(to bottom, #7a7a7a, #eee); */
+    /* background-color: rgba(0, 0, 0, 0.4);  */
+    background-color: rgba(0, 0, 0, 0.349);
+    mix-blend-mode: multiply;
+    z-index: 0;
+
+}
+
+.backgrounds .section .text {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+.backgrounds .section .text a {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    border-radius: 5px;
+    padding: 14px 18px;
+    mix-blend-mode: multiply;
+    transition: 0.3s ease-in-out;
+}
+
+.backgrounds .section .text a:hover {
+    transform: scale(1.2);
+    /* color: var(--blue-1); */
+}
+
+.backgrounds .section .text p {
+    text-align: justify;
+    background-color: #3e3e3e87;
+    border-radius: 30px 0 30px 0;
+    stroke: #000000;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.backgrounds .section-4 .text p {
+    text-align: justify;
+    background-color: transparent;
+    stroke: none;
+    padding: 20px;
+}
+
+
+.backgrounds .section-4 {
+    background-color: #303135;
+}
+
+.see-more-btn {
+    background-color: #282828;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    box-shadow: rgb(0 0 0 / 24%) 0 10px 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: fit-content;
+}
+
+.see-more-btn:hover {
+    transform: scale(1.05) !important;
+    box-shadow: var(--blue-1) 0 4px 2px, rgb(0 0 0) 0 8px 4px;
+}
+
+.see-more-btn span {
+    transition: transform 0.2s ease-in-out;
+}
+
+.see-more-btn:hover span {
+    transform: translateX(-3px);
+}
+
+hr {
+    width: 70%;
+    border-top: 2px solid var(--blue-1);
+    opacity: 0.6;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+/*endregion*/
